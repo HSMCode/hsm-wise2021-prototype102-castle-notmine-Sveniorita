@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.ProBuilder.MeshOperations;
 using UnityEngine.SocialPlatforms;
 
 public class WaveScript : MonoBehaviour
@@ -17,47 +18,41 @@ public class WaveScript : MonoBehaviour
     public GameObject WaveArm;
 	public GameObject player;
     public float speed;
+    public bool waving;
+    
+    
 
     // Start is called before the first frame update
     void Start()
     {
         speed = 5f;
+        waving = false;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        player.transform.Translate(Vector3.right * speed * Time.deltaTime, Space.World);
+        player.transform.Translate(Vector3.right * speed * Time.deltaTime, Space.World); //move Forward
 
         //Normaler Arm wird ausgeblendet, solange Leertaste gedr�ckt ist. 
+        //Winkender Arm wird angezeigt, solange die Leertaste gedr�ckt ist. 
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space))
         {
             NormalArm.SetActive(false);
+            WaveArm.SetActive(true);
+            waving = true;
         };
 
         if (Input.GetKeyUp(KeyCode.Space))
         {
             NormalArm.SetActive(true);
-        };
-
-
-
-        //Winkender Arm wird angezeigt, solange die Leertaste gedr�ckt ist. 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            WaveArm.SetActive(true);
-        };
-
-        if (Input.GetKeyUp(KeyCode.Space))
-        {
             WaveArm.SetActive(false);
-        };
-
-
+            waving = false;
+        }
     }
 
     
-
 }

@@ -15,6 +15,6 @@ public class BadGhost : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.back * Time.deltaTime * speed);
+        //transform.Translate(Vector3.back * Time.deltaTime * speed);
     }
 }

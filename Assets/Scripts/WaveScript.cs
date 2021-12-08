@@ -1,34 +1,36 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms;
 
 public class WaveScript : MonoBehaviour
 {
 
-    //Hintergrund fährt von rechts nach links durch das Bild, Player läuft auf der Stelle
-    //Random Geist spawnd und fährt von rechts nach links durch das Bild
-    //Geist reagiert auf das Winken und Tür öffnet sich - Level geschafft
+    //Hintergrund fï¿½hrt von rechts nach links durch das Bild, Player lï¿½uft auf der Stelle
+    //Random Geist spawnd und fï¿½hrt von rechts nach links durch das Bild
+    //Geist reagiert auf das Winken und Tï¿½r ï¿½ffnet sich - Level geschafft
 
 
     // Arme initialisieren
     public GameObject NormalArm;
     public GameObject WaveArm;
-
- 
+	public GameObject player;
+    public float speed;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        speed = 5f;
     }
 
     // Update is called once per frame
     void Update()
     {
 
- 
+        player.transform.Translate(Vector3.right * speed * Time.deltaTime, Space.World);
 
-        //Normaler Arm wird ausgeblendet, solange Leertaste gedrückt ist. 
+        //Normaler Arm wird ausgeblendet, solange Leertaste gedrï¿½ckt ist. 
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -42,7 +44,7 @@ public class WaveScript : MonoBehaviour
 
 
 
-        //Winkender Arm wird angezeigt, solange die Leertaste gedrückt ist. 
+        //Winkender Arm wird angezeigt, solange die Leertaste gedrï¿½ckt ist. 
         if (Input.GetKeyDown(KeyCode.Space))
         {
             WaveArm.SetActive(true);

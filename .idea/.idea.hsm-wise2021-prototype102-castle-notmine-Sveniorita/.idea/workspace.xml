@@ -14,6 +14,7 @@
     <setting file="file://$PROJECT_DIR$/../hsm-wise2021-prototype102-castle-notmine-Mac242/Assets/Scripts/Enemy_Movement.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TriggerforPoints.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../hsm-wise2021-prototype102-castle-notmine-falorac/Assets/Scripts/moveDoor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ReloadScene.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="2205Pn0pdMow8QUELgzvhC8eLQm" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -59,7 +60,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1638961678061</updated>
-      <workItem from="1638961878627" duration="27953000" />
+      <workItem from="1638961878627" duration="28720000" />
     </task>
     <servers />
   </component>

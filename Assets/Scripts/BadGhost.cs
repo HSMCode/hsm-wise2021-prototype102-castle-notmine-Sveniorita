@@ -31,7 +31,7 @@ public class BadGhost : MonoBehaviour
         if (other.gameObject.CompareTag("Player")) // Destroy Ghosts when Player is interacting
         {
            particleBad.Play();
-           Destroy(gameObject, 0.5f);
+           Destroy(gameObject, 0.1f);
         }
     }
 }

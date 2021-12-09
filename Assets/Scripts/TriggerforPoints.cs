@@ -66,7 +66,7 @@ public class TriggerforPoints : MonoBehaviour
         {
             Debug.Log("noooo -1");
             scoreEnemies--;
-            scoreFriends--;
+            //scoreFriends--;
         }
     }
     public void UIText()

@@ -5,23 +5,17 @@ using UnityEngine;
 public class MyObstacleSpawner : MonoBehaviour
 {
 
-	[SerializeField] GameObject[] ghosts;
+	[SerializeField] GameObject[] ghosts; // Array for Ghosts
 	public float spawnDelay;
 	public float spawnRate;
-
-	// Use this for initialization
-	
-	
 	
 	void Start()
 	{
 		InvokeRepeating("Spawn", spawnDelay, spawnRate);
 	}
-
-
 	void Spawn()
 	{
-		GameObject clone = Instantiate(ghosts[Random.Range(0,2)], transform.position, Quaternion.identity);
-		//Destroy(clone, 2f);
+		// Spawn Ghosts from array random
+		GameObject clone = Instantiate(ghosts[Random.Range(0,2)], transform.position, Quaternion.identity); 
 	}
 }

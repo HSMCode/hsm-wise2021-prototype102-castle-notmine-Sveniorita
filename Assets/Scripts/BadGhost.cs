@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class BadGhost : MonoBehaviour
 {
-    public float speed;
-    public float minSpeed= 2f;
-    public float maxSpeed= 6f;
+    private float speed;
+    private float minSpeed= 2f;
+    private float maxSpeed= 6f;
     public ParticleSystem particleBad;
 
     // Start is called before the first frame update

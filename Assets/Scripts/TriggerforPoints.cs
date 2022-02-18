@@ -15,10 +15,14 @@ public class TriggerforPoints : MonoBehaviour
     public GameObject gameOverPanel;
     public GameObject winPanel;
     public float timer;
+    private AudioManager _audioManager;
+
     private void Awake()
     {
         UIText();
         DisplayTime();
+
+        _audioManager = FindObjectOfType<AudioManager>();
     }
     // Start is called before the first frame update
     void Start()
@@ -57,16 +61,16 @@ public class TriggerforPoints : MonoBehaviour
         // if Player collides with Friend + score
         if (other.gameObject.CompareTag("Friend")) 
         {
-            Debug.Log("Friendo! +1");
+            // Debug.Log("Friendo! +1");
             scoreFriends++;
+            _audioManager.BefriendSound();
         }
         
         // if Player collides with enemy -score and -live
         if (other.gameObject.CompareTag("Enemy"))
         {
-            Debug.Log("noooo -1");
+            // Debug.Log("noooo -1");
             scoreEnemies--;
-            //scoreFriends--;
         }
     }
     public void UIText()
@@ -81,7 +85,7 @@ public class TriggerforPoints : MonoBehaviour
         timer -= Time.deltaTime;  // counting seconds down
         int minutes = Mathf.FloorToInt(timer / 60f); 
         int seconds = Mathf.FloorToInt(timer % 60f);
-        timerText.text =  "Timer: " + string.Format("{0:00}:{1:00}", minutes, seconds); // Display Timer ; Format / Text
+        timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds); // Display Timer ; Format / Text
     }
     public void GameOver()
     {

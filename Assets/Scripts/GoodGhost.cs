@@ -6,9 +6,9 @@ using Random = UnityEngine.Random;
 
 public class GoodGhost : MonoBehaviour
 {
-    public float speed;
-    public float minSpeed= 2f;
-    public float maxSpeed = 6f;
+    private float speed;
+    private float minSpeed= 2f;
+    private float maxSpeed = 6f;
     public ParticleSystem particleFriend;
 
     // Start is called before the first frame update
